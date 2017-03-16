@@ -8,7 +8,7 @@ Author: Timothy Scott
 for(var i = 0; i < 10; i++){
 	console.log("Catalan number " + i + " is " + catalan(i));
 	// Alternative that doesn't require opening the JS console, but is much more annoying:
-	//alert("Catalan number " + i + " is " + catalan(i));
+	// alert("Catalan number " + i + " is " + catalan(i));
 }
 
 
