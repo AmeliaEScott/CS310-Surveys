@@ -9,14 +9,14 @@
 ### Ada
  
  1. [Download Ada compiler](http://libre.adacore.com/download/)
-   - Follow the instructions for your operating system
-   - Make sure to add it to your PATH
+    - Follow the instructions for your operating system
+    - Make sure to add it to your PATH
  2. On command line, run `gcc -c AdaDemo.adb`
-   - Yes, GCC can compile Ada. Who knew?
-   - The -c flag is necessary because GCC cannot link Ada
- 3  `gnatbind AdaDemo`
-   - Be sure to leave off the `.adb` file extension
+    - Yes, GCC can compile Ada. Who knew?
+    - The -c flag is necessary because GCC cannot link Ada
+ 3. `gnatbind AdaDemo`
+    - Be sure to leave off the `.adb` file extension
  4. `gnatlink AdaDemo`
-   - Again, no file extension
+    - Again, no file extension
  5. `./AdaDemo`
-   - `AdaDemo` is now your executable.
+    - `AdaDemo` is now your executable.
