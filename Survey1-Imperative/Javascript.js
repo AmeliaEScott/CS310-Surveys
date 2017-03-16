@@ -4,11 +4,13 @@ Team: Haskers
 Author: Timothy Scott
 */
 
-//Main function starts here:
-
+//"Main method" starts here:
 for(var i = 0; i < 10; i++){
 	console.log("Catalan number " + i + " is " + catalan(i));
+	// Alternative that doesn't require opening the JS console, but is much more annoying:
+	//alert("Catalan number " + i + " is " + catalan(i));
 }
+
 
 //Actual functions start here
 function catalan(n){
@@ -21,7 +23,9 @@ function catalan(n){
 		return factorial(n) / (factorial(k) * factorial(n - k));
 
 		function factorial(n){
+			// Similarly, within here, "n" refers to the parameter of factorial()
 			if(n <= 1){
+				// 0! is 1
 				return 1;
 			}else{
 				return n * factorial(n - 1);
