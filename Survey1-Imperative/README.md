@@ -20,3 +20,11 @@
     - Again, no file extension
  5. `./AdaDemo`
     - `AdaDemo` is now your executable.
+    
+### PHP
+
+1. Open your terminal
+2. cd/file_location
+   - file_location is where your file is located
+3. php PHP.php
+   - PHP.php is the filename
