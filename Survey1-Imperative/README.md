@@ -28,3 +28,10 @@
    - file_location is where your file is located
 3. php PHP.php
    - PHP.php is the filename
+   
+### Python
+
+1. Open terminal
+2. cd/file_location
+3. python Python.py
+   - Python.py is the filename
