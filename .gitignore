@@ -3,3 +3,6 @@
 # Ada compiled files
 *.o
 *.ali
+
+# Several compilers
+a.out
