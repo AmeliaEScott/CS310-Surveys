@@ -42,3 +42,7 @@
  1. On command line, run `gcc cplusplus.cpp`
      * This creates the executable `a.out`
  2. `./a.out`
+
+ ### Ruby
+
+ Most Mac or Linux computers will already have a ruby interpreter installed. Just run `ruby ruby.rb` on the command line.
