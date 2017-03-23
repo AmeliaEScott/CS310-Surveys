@@ -16,7 +16,11 @@ end
 
 # this method prints the catalan number of n
 def cataNum(n)
-	fact(2*n)/(fact(n+1)*fact(n))
+	if n == 0
+		binCo(2*n,n)
+	else
+		binCo(2*n,n)-binCo(2*n,n-1)
+	end	
 end
 
 # printing the catalan number of 0-9
