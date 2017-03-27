@@ -20,17 +20,13 @@ function catalanNumber($n){
     $binomialCoefficient = function($j,$k){
 
         //Below is the factorial function that recursively finds i!
-        $factorial = function($i){
-            $fact=1;
-            for($l=$i;$l>0;$l--){
-                if($i<2){
-                    return 1;
-                }
-                else{
-                    $fact = $fact*$l;
-                }
+        $factorial = function($i) use (&$factorial){
+            if($i<2){
+                return 1;
             }
-            return $fact;
+            else{
+                return $factorial($i-1)*$i;
+            }
         };//end factorial()
         return $factorial($j)/($factorial($k)*$factorial($j-$k));
     };//end binomailCoefficient
