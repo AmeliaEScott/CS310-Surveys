@@ -46,3 +46,13 @@
  ### Ruby
 
  Most Mac or Linux computers will already have a ruby interpreter installed. Just run `ruby ruby.rb` on the command line.
+
+ ### Fortran
+
+ Fortran is one of those weird old languages that's built in to GCC. Just compile it like a C file.
+
+ `gcc fortran.f90`
+
+ ### Pascal
+
+ I never did figure out how to run it on my computer. I've just been running it on [ideone.com](http://ideone.com)
