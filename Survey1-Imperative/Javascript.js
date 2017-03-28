@@ -2,13 +2,12 @@
 CS310 Survey 1 - Imperative languages
 Team: Haskers
 Author: Timothy Scott
+Reviewer: Kenneth Redillas
 */
 
 //"Main method" starts here:
 for(var i = 0; i < 10; i++){
     console.log("Catalan number " + i + " is " + catalan(i));
-    // Alternative that doesn't require opening the JS console, but is much more annoying:
-    // alert("Catalan number " + i + " is " + catalan(i));
 }
 
 

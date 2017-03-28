@@ -38,6 +38,7 @@ begin -- Begin AdaDemo (Main function)
         -- Ada uses apostrophes instead of dots, and the function is named differently,
         -- so the equivalent is Integer'Image(5)
         -- (Or, in this case, Long_Integer'Image(...))
-      Put_Line("Catalan number " & Integer'Image(Num) & " is " & Long_Integer'Image(Catalan(Long_Integer(Num))));
+      Put_Line("Catalan number " & Integer'Image(Num) & " is " 
+        & Long_Integer'Image(Catalan(Long_Integer(Num))));
     end loop;
 end AdaDemo;

@@ -5,7 +5,8 @@ var
     i: Integer;
     s: String;
     (* Longint is only 32 bits, and normal integer is only 16 bits. *)
-    (* It's necessary to use Longint because it's equivalent to most languages' int *)
+    (* It's necessary to use Longint because it's 
+        equivalent to most languages' int *)
     function Catalan (n : Longint) : Longint;
         function Binom (n, k : Longint) : Longint;
             function Factorial (n : Longint) : Int64;
@@ -16,7 +17,8 @@ var
                     Factorial := n * Factorial(n - 1);
             end;
         begin
-            (* The / character does real division. To do integer division, use div *)
+            (* The / character does real division. 
+                To do integer division, use div *)
             Binom := Factorial(n) div (Factorial(k) * Factorial(n - k));
         end;
     begin

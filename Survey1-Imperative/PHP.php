@@ -3,7 +3,7 @@
  * CS 310 - Survey #1
  * Team: Haskers
  * Author: Ryan Rosier
- * Reviewer:
+ * Reviewer: Timothy Scott
  */
 
 //Below is a for loop to test the catalan function for inputs 1 through 10
@@ -14,7 +14,7 @@ for($t=0; $t<11; $t++){
     echo catalanNumber($t);
     echo "\n";
 }
-//Below is the catalan function that returns  1/n+1 times the binomial coefficient
+//Below is the catalan function that returns  1/n+1 times 2n choose n
 function catalanNumber($n){
     //Below is the binomial coefficient function that return j!/(k!*(j-k)!)
     $binomialCoefficient = function($j,$k){

@@ -1,3 +1,7 @@
+# Team Haskers
+# Author: Edwin Velasquez
+# Timothy Scott
+
 # Returns the nth catalan number
 def cataNum(n)
     # Returns the value of n choose k
