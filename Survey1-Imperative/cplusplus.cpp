@@ -37,9 +37,9 @@ struct s_catalan
         {
             long long int operator()(long long int n)
             {
-            	if(!n){ return 1; }         //recursion base case: if the input is 0, return 1
-            	struct s_factorial fact;        //construct new factorial struct
-            	return n*fact(n-1);             //use the fact struct () operator to return factorial
+                if(!n){ return 1; }         //recursion base case: if the input is 0, return 1
+                struct s_factorial fact;        //construct new factorial struct
+                return n*fact(n-1);             //use the fact struct () operator to return factorial
             }
         };
         long long int operator()(long long int n, long long int k)
@@ -51,11 +51,11 @@ struct s_catalan
     };
     long long int operator()(long long int n)
     {
-    	if(n<0){ return 0; }
-    	struct s_binomialCoefficient binomialCoeff;     //create new binomial coefficient structure
+        if(n<0){ return 0; }
+        struct s_binomialCoefficient binomialCoeff;     //create new binomial coefficient structure
         return (long long int)                          //due to intermediate calculations
-        	(1.0/((double)n+1.0)*                       //rounding down to integer division,
-        		(double)binomialCoeff(2*n,n));          //intermediate calculations are performed as doubles
+            (1.0/((double)n+1.0)*                       //rounding down to integer division,
+                (double)binomialCoeff(2*n,n));          //intermediate calculations are performed as doubles
     }
 };
 
