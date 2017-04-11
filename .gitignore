@@ -6,3 +6,7 @@
 
 # Several compilers
 a.out
+
+# Haskell compiler
+*.hi
+*.o
