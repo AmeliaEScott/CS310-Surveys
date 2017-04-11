@@ -1,8 +1,21 @@
+/*
+Function: Member
+Language: Java
+Author: Timothy Scott
+Team: Haskers
+*/
+
 import java.util.List;
 import java.util.LinkedList;
 
 public class member{
 
+	/*
+	Certified to be referentially transparent by Timothy Scott
+	Reason: This function does not reference any variables outside of the scope of the
+	function, meaning that it cannot store any information between different calls
+	of the function.
+	*/
 	public static boolean member(Number x, List<Number> list){
 		if(list.size() <= 0){
 			return false;

@@ -1,3 +1,8 @@
+-- Function: member
+-- Language: Haskell
+-- Author: Timothy Scott
+-- Team: Haskers
+
 member x lst =
 	if length lst == 0 then False
 	else if head lst == x then True
