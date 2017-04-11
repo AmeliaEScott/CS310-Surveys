@@ -1,6 +1,6 @@
 (defn member [x, lst]
 	(cond
-		(nil? lst) false
+		(empty? lst) false
 		(= x (first lst)) true
 		:else (member x (rest lst))
 	)
