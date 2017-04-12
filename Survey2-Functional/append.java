@@ -22,9 +22,7 @@ public class append{
 		list2.add(5);
 		list2.add(6);
 
-		List<Integer> list3 = new ArrayList<>();
-		list3.addAll(list2);
-		append(list1, list3);
+		List<Integer> list3 = append(list1, list2);
 
 		System.out.println(list1);
 		System.out.println(list2);
@@ -41,9 +39,7 @@ public class append{
 		list5.add("append");
 		list5.add("test");
 		
-		List<String> list6 = new ArrayList<>();
-		list6.addAll(list5);
-		append(list4, list6);
+		List<String> list6 = append(list4, list5);
 
 		System.out.println(list4);
 		System.out.println(list5);
@@ -52,16 +48,16 @@ public class append{
 	}
 
 	private static <E> List<E> append(List<E> list1, List<E> list2) {
-//		List<E> result = new ArrayList<E>();
-//		result.addAll(list2);
+		List<E> result = new ArrayList<E>();
+		result.addAll(list2);
 		if(list1.isEmpty()){
-			return list2;
+			return result;
 		}
 		else{
-			list2.add(0, list1.get(list1.size()-1));
-			append(list1.subList(0, list1.size()-1), list2);
+			result.add(0, list1.get(list1.size()-1));
+			result = append(list1.subList(0, list1.size()-1), result);
 		}
-		return list2;
+		return result;
 	}
 
 
