@@ -2,45 +2,70 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * 
+ * Function: append
+ * Language: Java
  * @author Edwin Velasquez
- * CS 310: Survey 2
- * Append: Java
  */
 
 public class append{
 	public static <E> void main(String[] args){
-		List<E> test1 = new ArrayList<>();
-		List<E> test2 = new ArrayList<>();
-//		List<E> test3 = new ArrayList<>();
-//		test3.appendsList(test1, test2);
+		List<Integer> list1 = new ArrayList<>();
+		List<Integer> list2 = new ArrayList<>();
+
+		list1.add(1);
+		list1.add(2);
+		list1.add(3);
+		list1.add(7);
+
+
+		list2.add(4);
+		list2.add(5);
+		list2.add(6);
+
+		List<Integer> list3 = new ArrayList<>();
+		list3.addAll(list2);
+		append(list1, list3);
+
+		System.out.println(list1);
+		System.out.println(list2);
+		System.out.println(list3);
+
+		List<String> list4 = new ArrayList<String>();
+		List<String> list5 = new ArrayList<String>();
+
+		list4.add("hello");
+		list4.add("this");
+		list4.add("is");
+
+		list5.add("another");
+		list5.add("append");
+		list5.add("test");
 		
-		test1.add((E) "hello");
-		test2.add((E) "world");
-		List<E> test3 = appendsLists(test1,test2);
-		System.out.println(test1 + " " + test2);
-		System.out.println(test3);
-		
+		List<String> list6 = new ArrayList<>();
+		list6.addAll(list5);
+		append(list4, list6);
+
+		System.out.println(list4);
+		System.out.println(list5);
+		System.out.println(list6);
+
 	}
 
-	
-	
-	// This doesn't work because it makes a new list each recursive call
-	// so it'll only return list2 at the end
-	// I also tried making the method non-static but it comes up with 
-	// some obscure error in the main class(Commented out lines 15&16)
-	
-	
-	public static <E> List<E> appendsLists(List<E> List1, List<E> List2) {
-		List<E> List3 = new ArrayList<>();
-		if(List1.isEmpty()){
-			List3.addAll(List2);
-			return List3;
+	private static <E> List<E> append(List<E> list1, List<E> list2) {
+//		List<E> result = new ArrayList<E>();
+//		result.addAll(list2);
+		if(list1.isEmpty()){
+			return list2;
 		}
 		else{
-			List3.add(List1.get(0));
-			return  appendsLists(List1.subList(1, List1.size()), List2);
+			list2.add(0, list1.get(list1.size()-1));
+			append(list1.subList(0, list1.size()-1), list2);
 		}
+		return list2;
 	}
-	
+
+
+
+
+
 }
