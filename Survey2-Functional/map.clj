@@ -6,8 +6,8 @@
  
 (defn mapFunc [fun v] 
   (cons (fun (first v))
-	  (if (not (empty? (subvec v 1))) 
-		(mapFunc fun (subvec v 1))
+	  (if (not (empty? (rest v))) 
+		(mapFunc fun (rest v))
 	   )
    )
 )
