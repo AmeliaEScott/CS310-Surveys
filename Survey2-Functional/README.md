@@ -4,6 +4,9 @@
 
 Follow [these instructions](https://clojure.org/guides/getting_started), then copy and paste the code into the REPL.
 
+Note: Do NOT use [tryclj.com](http://www.tryclj.com). It has bugs that cause errors that shouldn't happen.
+If you don't want to download the REPL, then use [ideone.com](https://ideone.com).
+
 ### Haskell
 
  - [Install GHC](https://www.haskell.org/ghc/download_ghc_7_6_1)
