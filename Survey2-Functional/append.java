@@ -47,6 +47,12 @@ public class append{
 
 	}
 
+	/*
+	Referential transparency: this function 
+	doesn't reference any variables
+	outside of the function, and it does not alter 
+	the lists passed to it.
+	*/
 	private static <E> List<E> append(List<E> list1, List<E> list2) {
 		List<E> result = new ArrayList<E>();
 		result.addAll(list2);
@@ -59,9 +65,5 @@ public class append{
 		}
 		return result;
 	}
-
-
-
-
 
 }
