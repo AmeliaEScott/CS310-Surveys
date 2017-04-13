@@ -22,12 +22,17 @@ public class same {
 	
     }
 
+
+    /*
+	Referrential transparency: This function does not reference any variables outside the scope
+	of the function, and it does not modify the list passed to it. Therefore, it is referrentially transparent.
+    */
     public static <e> boolean same(List<e> list1, List<e> list2) {
-	if (list1.isEmpty() && list2.isEmpty()) return true;
-	else if (list2.isEmpty()) return false;
-	else if (list1.equals(list2)) {
-	    return same(list1.subList(1, list1.size()) , list2.subList(1, list2.size()));
-	}
-	else return false;
+		if (list1.isEmpty() && list2.isEmpty()) return true;
+		else if (list2.isEmpty()) return false;
+		else if (list1.get(0).equals(list2.get(0))) {
+		    return same(list1.subList(1, list1.size()) , list2.subList(1, list2.size()));
+		}
+		else return false;
     }
 }
