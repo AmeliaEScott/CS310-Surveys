@@ -1,4 +1,6 @@
-
+;; Function: map
+;; Language: Clojure
+;; Author: Matt Gramlich
 
 (defn testfunc [a] (* a a) )
  
