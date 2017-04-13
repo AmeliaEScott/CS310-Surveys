@@ -1,6 +1,15 @@
+/*
+	Function: Map
+	Language: Java
+	Author: Matt Gramlich
+	Team: Haskers
+*/
+
 import java.util.*;
 import java.lang.*;
 import java.io.*;
+
+
 
 class MapClass
 {
@@ -20,9 +29,7 @@ class MapClass
 		while(it.hasNext())
 		{
 			list.add(mappedFunc.mapFunc(it.next()));
-		}
-		c.clear();
-		c.addAll(list);
+		};
 		return list;
 	}
 	
@@ -32,11 +39,14 @@ class MapClass
 		list.add(10.0);
 		list.add(2.0);
 		list.add(9.0);
-		map(list,  new MapInterface<Double,Double>() {
+		
+		System.out.println(list.toString());
+		System.out.println(map(list,  new MapInterface<Double,Double>() {
    						public Double mapFunc(Double val) {
         					return squareFunc(val);
    						}
-					});
+					}));
+		//this extra print shows that this function is referentially transparent
 		System.out.println(list.toString());
 	}
 }
