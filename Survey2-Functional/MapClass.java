@@ -10,7 +10,12 @@ import java.lang.*;
 import java.io.*;
 
 
-
+/*
+	Referential transparency: this function 
+	doesn't reference any variables
+	outside of the function, and it does not alter 
+	the lists passed to it.
+*/
 class MapClass
 {
 	public interface MapInterface<T,V>
