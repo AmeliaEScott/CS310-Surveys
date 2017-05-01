@@ -1,0 +1,21 @@
+
+; Calculates the base-2 logarithm
+(define (log2 x) 
+	(/ (log x) (log 2))
+)
+
+; This function actuall calculates the lgstar
+(define (lgstar x) 
+	(if (<= x 1) 
+		0 
+		(+ 1 (lgstar (log2 x)))
+	)
+)
+
+; This function replicates the functionality of
+; inputting an integer and determining if it is
+; the lgstar of the other input.
+(define (islgstar x i) (= i (lgstar x)))
+
+; "Main function"
+(write (lgstar 32))
